@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #131313;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container form {
+    padding: 25px;
+    box-shadow: 0 0 35px rgb(115, 219, 51);
+    border-radius: 15px;
+}
+
+.ds-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.ds-row>* {
+    flex: 1;
+}
+
+.note-image {
+    width: 200px;
+}
+
+.note-image>img {
+    height: 50px;
+    object-fit: contain;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(69, 110, 46);
+    border-radius: 10px;
+    outline: none;
+}
+
+.value-00 {
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: rgb(80, 200, 96);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.final-ans-container {
+    margin-top: 20px;
+}
+
+h2 {
+    padding: 10px 0px 0px 20px;
+}

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 28, 28);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider {
+    width: 500px;
+    height: 350px;
+    background-color: rgb(209, 69, 69);
+    border-radius: 5px;
+    overflow-x: hidden;
+}
+
+.slider-content-01 {
+    background-color: rgb(28, 152, 90);
+}
+
+.slider-content-02 {
+    background-color: rgb(167, 38, 94);
+}
+
+.slider-content-03 {
+    background-color: rgb(92, 46, 92);
+}
+
+.slider-content-04 {
+    background-color: rgb(228, 180, 89);
+}
+
+.slider-container {
+    display: flex;
+    height: 100%;
+    transition: all .3s ease;
+}
+
+.slides {
+    flex: 1 0 100%;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+img {
+    width: 500px;
+    height: 350px;
+}
+
+/* Media Query */
+
+@media (max-width : 650px) and (min-width :320px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(28, 28, 28);
+    }
+
+    .main {
+        gap: 20px;
+    }
+
+    .slider {
+        width: 350px;
+        height: 250px;
+        background-color: white;
+        border-radius: 5px;
+        overflow-x: hidden;
+    }
+
+    .slider-container {
+        display: flex;
+        height: 100%;
+        transition: all .3s ease;
+    }
+
+    .slides {
+        flex: 1 0 100%;
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #prev {
+        position: absolute;
+        top: 390px;
+        left: 90px;
+    }
+
+    #next {
+        font-size: 20px;
+        position: absolute;
+        top: 390px;
+        right: 90px;
+    }
+
+    img {
+        width: 350px;
+        height: 250px;
+    }
+}

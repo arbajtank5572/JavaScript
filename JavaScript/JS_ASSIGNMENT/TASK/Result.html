@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result-Task</title>
+    <style>
+        * {
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            border: solid 2px rgb(68, 68, 170);
+            width: 650px;
+        }
+
+        h2 {
+            padding: 20px;
+        }
+
+        table {
+            padding-left: 60px;
+        }
+
+        input {
+            border: solid 2px blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Marksheet For Information Technology</h2>
+        <p style="text-align: center">Enter Marks</p>
+        <form action="" onsubmit="return result()">
+            <table border="0" cellpadding="10" cellspacing="10">
+                <tr>
+                    <td>1. C Language</td>
+                    <td>
+                        <input type="number" id="clang" required
+                            oninput="if(this.value.length>2){this.value = this.value.substring(0,2); }" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>2. C++ Language</td>
+                    <td>
+                        <input type="number" id="c++lang" required
+                            oninput="if(this.value.length>2){this.value = this.value.substring(0,2); }" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>3. Database</td>
+                    <td>
+                        <input type="number" id="Database" required
+                            oninput="if(this.value.length>2){this.value = this.value.substring(0,2); }" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>4. HTML</td>
+                    <td>
+                        <input type="number" id="html" required
+                            oninput="if(this.value.length>2){this.value = this.value.substring(0,2); }" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>5. CSS</td>
+                    <td>
+                        <input type="number" id="css" required
+                            oninput="if(this.value.length>2){this.value = this.value.substring(0,2); }" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>6. PHP</td>
+                    <td>
+                        <input type="number" id="php" required
+                            oninput="if(this.value.length>2){this.value = this.value.substring(0,2); }" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>7. Core Java</td>
+                    <td>
+                        <input type="number" id="corejava" required
+                            oninput="if(this.value.length>2){this.value = this.value.substring(0,2); }" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit" style="width: 150px; border: solid 2px rgb(77, 77, 208);"> Result</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Total is : <span id="total"></span>/350</p>
+                    </td>
+                    <td>
+                        <p>Percentage is : <span id="totalpre"></span>%</p>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+<script>
+    function result() {
+        let clang = parseInt(document.getElementById("clang").value);
+        let clang1 = parseInt(document.getElementById("c++lang").value);
+        let database = parseInt(document.getElementById("Database").value);
+        let html = parseInt(document.getElementById("html").value);
+        let css = parseInt(document.getElementById("css").value);
+        let php = parseInt(document.getElementById("php").value);
+        let corejava = parseInt(document.getElementById("corejava").value);
+
+        var total = clang + clang1 + database + html + css + php + corejava;
+        var pre = (total * 100) / 350;
+
+        if (pre <= 40) {
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("total").style.color = "red";
+            document.getElementById("totalpre").innerHTML = pre.toFixed(2);
+            document.getElementById("totalpre").style.color = "red";
+            return false;
+        }
+        if (pre <= 60) {
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("totalpre").innerHTML = pre.toFixed(2);
+            document.getElementById("total").style.color = "blue";
+            document.getElementById("totalpre").style.color = "blue";
+            return false;
+        }
+        if (pre <= 80) {
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("totalpre").innerHTML = pre.toFixed(2);
+            document.getElementById("total").style.color = "orange";
+            document.getElementById("totalpre").style.color = "orange";
+            return false;
+        } else {
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("totalpre").innerHTML = pre.toFixed(2);
+            document.getElementById("total").style.color = "green";
+            document.getElementById("totalpre").style.color = "green";
+            return false;
+        }
+    }
+
+</script>
+
+</html>
